@@ -1,0 +1,69 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+padding: 6em 3em 2em 2em;
+}
+
+.bigger-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+    width: 150px;
+    border: 1px solid black;
+    
+}
+
+.slide {
+    background-color: red;
+    color: white;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    animation: fadeup 2s forwards 1;
+    animation-delay: 1s; 
+}
+
+.container2 {
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+    width: 150px;
+    border: 1px solid black;
+    
+}
+
+.slide2 {
+    background-color: orange;
+    color: white;
+    position: relative;
+    top: -20em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    animation: fadedown 2s forwards 1;
+    animation-delay: 1.2s;
+}
+
+@keyframes fadeup {
+ 100% {top: -20em;}
+}
+@keyframes fadedown {
+ 100% {top: 0;}
+}
